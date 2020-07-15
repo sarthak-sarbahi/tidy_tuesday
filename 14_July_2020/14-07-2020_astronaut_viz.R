@@ -35,5 +35,5 @@ astronaut_mission_cleaned_viz <- astronaut_mission_cleaned %>% group_by(year_of_
 astronaut_mission_cleaned_viz %>% summarise(mean_n=round(mean(n),0))
 
 # Visualization - line plot 
-astronaut_mission_cleaned_viz %>% ggplot() + geom_line(aes(x=year_of_mission,y=n)) + labs(title="Number of astronaut missions vs Year?",x="Year of Mission",y="Number of missions") + theme_wsj() + geom_text(aes(x=2018,y=5.3,label="Average is 5 missions"),color="black") + geom_text(aes(x=1986,y=13.5,label="13 missions launched in 1985")) + geom_text(aes(x=1969,y=10.5,label="Peak during 'Space Race'"))
+astronaut_mission_cleaned_viz %>% ggplot() + geom_line(aes(x=year_of_mission,y=n)) + labs(title="Number of astronaut missions vs Year?",x="Year of Mission",y="Number of missions") + theme_wsj() + geom_text(aes(x=2017,y=5.3,label="Average is 5 missions"),size=5) + geom_text(aes(x=1986,y=13.5,label="13 missions launched in 1985"),size=5) + geom_text(aes(x=1969,y=10.5,label="Peak during 'Space Race'"),size=5)
 
